@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", "Segoe UI", system-ui, sans-serif;
+  --color-accent: #0d9488;
+}
+
+:root { --accent: #0d9488; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-sans); background: #ffffff; color: #181818; }
+h1, h2, h3, h4 { text-wrap: balance; }
+p { text-wrap: pretty; }
+.heading-1 { font-size: 3.75rem; line-height: 1; font-weight: 600; }
+.heading-2 { font-size: 3rem; line-height: 1; font-weight: 600; }
+.heading-3 { font-size: 2.25rem; line-height: 2.5rem; font-weight: 600; }
+.heading-4 { font-size: 1.875rem; line-height: 2.25rem; font-weight: 600; }
+.heading-5 { font-size: 1.5rem; line-height: 2rem; font-weight: 600; }
+.heading-6 { font-size: 1.25rem; line-height: 1.75rem; font-weight: 600; }
+.title-1 { font-size: 1.25rem; line-height: 1.75rem; font-weight: 500; }
+.title-2 { font-size: 1.125rem; line-height: 1.75rem; font-weight: 500; }
+.title-3 { font-size: 1rem; line-height: 1.5rem; font-weight: 500; }
+.body-1 { font-size: 1rem; line-height: 1.5rem; font-weight: 600; }
+.body-2 { font-size: 1rem; line-height: 1.5rem; font-weight: 500; }
+.body-3 { font-size: 1rem; line-height: 1.5rem; font-weight: 400; }
+.body-5 { font-size: 0.875rem; line-height: 1.25rem; font-weight: 500; }
+.body-6 { font-size: 0.875rem; line-height: 1.25rem; font-weight: 400; }
+.button-md { font-size: 1rem; line-height: 1.5rem; font-weight: 600; }
+.button-sm { font-size: 0.875rem; line-height: 1.25rem; font-weight: 600; }
+.caption-2 { font-size: 0.875rem; line-height: 1.25rem; font-weight: 400; }
+.caption-4 { font-size: 0.75rem; line-height: 1rem; font-weight: 500; }
+.caption-5 { font-size: 0.75rem; line-height: 1rem; font-weight: 400; }
+.hero-gradient-text {
+  background: linear-gradient(to right, #000000, #666666);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero-gradient-text-dark {
+  background: linear-gradient(to right, #ffffff, #9b9b9b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.ease-base { transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1); }
+.reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.tagline-word { opacity: 0.3; transition: opacity 0.5s cubic-bezier(0.22,1,0.36,1); }
+.tagline-word.on { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .tagline-word { opacity: 1; transition: none; }
+  html { scroll-behavior: auto; }
+}
